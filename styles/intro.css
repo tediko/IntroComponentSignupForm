@@ -177,6 +177,9 @@
 }
 
 @media (max-width: 480px) {
+    .intro__heading {
+        line-height: 1.2;
+    }
     .intro__message-text {
         text-align: center;
         max-width: 210px;
