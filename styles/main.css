@@ -22,6 +22,8 @@ html {
 }
 
 body {
+    background: url(../assets/img/bg-intro-desktop.png), var(--clr-red);
+    background-position: top;
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
 }
