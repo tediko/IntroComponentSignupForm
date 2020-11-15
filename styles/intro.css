@@ -40,7 +40,8 @@
     margin-bottom: 24px;
     font-size: 0.98rem;
     box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2);
-    transition: opacity 250ms ease-in;
+    transition: opacity 250ms ease-in,
+                height 250ms ease-in;
 }
 
 .intro__message:hover {
@@ -58,6 +59,7 @@
     border-radius: 10px;
     padding: 40px;
     box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2);
+    transition: padding 250ms ease-in;
 }
 
 .intro__input {
@@ -138,4 +140,50 @@
 .intro__link:hover::before {
     width: 100%;
     left: 0px;
+}
+
+/* Intro media queries */
+@media (max-width: 800px) {
+    .intro__container {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .intro__content {
+        text-align: center;
+        margin-bottom: 64px;
+    }
+
+    .intro__heading {
+        font-size: 1.75rem;
+    }
+
+    .intro__text {
+        max-width: 532px;
+    }
+
+    .intro__signup {
+        margin: 0;
+        width: 100%;
+    }
+
+    .intro__message {
+        height: 80px;
+    }
+
+    .intro__form {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro__message-text {
+        text-align: center;
+        max-width: 210px;
+    }
+
+    .intro__terms {
+        max-width: 243px;
+        margin: 15px auto 0 auto;
+    }
 }
