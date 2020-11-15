@@ -36,3 +36,8 @@ body {
 .container {
     max-width: 1110px;
 }
+
+/* Text */
+.text-bold {
+    font-weight: 600;
+}
