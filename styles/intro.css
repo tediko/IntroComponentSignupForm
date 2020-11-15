@@ -1,1 +1,141 @@
 /* Intro section */
+.intro__container {
+    display: flex;
+    margin: 80px 30px;
+}
+
+.intro__content {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.intro__heading {
+    font-size: 3.0625rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 32px;
+}
+
+.intro__text {
+    font-weight: 500;
+}
+
+.intro__signup {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    max-width: 540px;
+    margin-left: 20px;
+}
+
+.intro__message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--clr-blue);
+    border-radius: 10px;
+    height: 58px;
+    margin-bottom: 24px;
+    font-size: 0.98rem;
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms ease-in;
+}
+
+.intro__message:hover {
+    opacity: 0.9;
+}
+
+.intro__message-text {
+    font-weight: 300;
+}
+
+.intro__form {
+    display: flex;
+    flex-flow: column;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.intro__input {
+    border: 1px solid var(--clr-blue-grayish);
+    border-radius: 4px;
+    height: 56px;
+    padding-left: 30px;
+    transition: border 250ms ease-in;
+}
+
+.intro__form * + * { /* Lobotomized Owl selector */
+    margin-top: 20px;
+}
+
+.intro__input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 600;
+}
+
+.intro__input:focus::placeholder {
+    color: var(--clr-blue-dark);
+    opacity: 1;
+}
+
+.intro__input:focus.intro__input {
+    border: 1px solid var(--clr-blue-dark);
+}
+
+.intro__cta {
+    position: relative;
+    background: var(--clr-green);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.01rem;
+    text-transform: uppercase;
+    color: #fff;
+    height: 52px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-bottom-width: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 250ms ease-in,
+                border-width 250ms ease-in;
+}
+
+.intro__cta:hover {
+    opacity: 0.8;
+}
+
+.intro__terms {
+    color: var(--clr-blue-grayish);
+    font-size: 0.65625rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.intro__link {
+    position: relative;
+    text-decoration: none;
+    color: var(--clr-red);
+    font-weight: 700;
+}
+
+.intro__link::before {
+    position: absolute;
+    content: '';
+    bottom: -1px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: var(--clr-red);
+    transition: width 250ms ease-in,
+                left 250ms ease-in;
+}
+
+.intro__link:hover::before {
+    width: 100%;
+    left: 0px;
+}
