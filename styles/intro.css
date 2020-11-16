@@ -64,7 +64,32 @@
     transition: padding 250ms ease-in;
 }
 
+.intro__input-wrapper {
+    position: relative;
+}
+
+.intro__input-wrapper::before {
+    visibility: hidden;
+    position: absolute;
+    content: url('../assets/img/icon-error.svg');
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
+
+.intro__input-wrapper.active::before {
+    visibility: visible;
+}
+
+.intro__input-wrapper.active .intro__input {
+    color: var(--clr-red);
+    border: 2px solid var(--clr-red);
+}
+
 .intro__input {
+    width: 100%;
     border: 1px solid var(--clr-blue-grayish);
     border-radius: 4px;
     height: 56px;
@@ -90,6 +115,10 @@
 
 .intro__input:focus.intro__input {
     border: 1px solid var(--clr-blue-dark);
+}
+
+.intro__input:invalid {
+    box-shadow: none;
 }
 
 .intro__invalid-message {
