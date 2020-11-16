@@ -41,3 +41,24 @@ body {
 .text-bold {
     font-weight: 600;
 }
+
+/* Animations */
+@keyframes invalidIcon {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.2);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
