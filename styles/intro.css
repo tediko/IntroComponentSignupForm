@@ -92,6 +92,15 @@
     border: 1px solid var(--clr-blue-dark);
 }
 
+.intro__invalid-message {
+    color: var(--clr-red);
+    margin-top: 3px;
+    align-self: flex-end;
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
 .intro__cta {
     position: relative;
     background: var(--clr-green);
