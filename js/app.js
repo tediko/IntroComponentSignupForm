@@ -13,7 +13,7 @@ const showInvalidMsg = (input) => {
         })
 }
 
-// Fn to hide invalid message on screen
+// Fn to hide invalid message from screen
 const hideInvalidMsg = (input) => {
     input.parentElement.classList.remove('active');
         invalidMsg.forEach(msg => {
@@ -23,7 +23,7 @@ const hideInvalidMsg = (input) => {
         })
 }
 
-// Validate input and add invalid class to form if input is invalid
+// Validate email input and add invalid class if input is invalid
 const validateEmail = (input) => {
     const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (!emailRegex.test(input.value) || input.value == '') {
@@ -34,12 +34,13 @@ const validateEmail = (input) => {
     }
 }
 
+// Validate form for empty inputs and invalid emails
 const validateForm = (event) => {
-    let emptyCheck = false;
-    event.preventDefault();
+    let emptyCheck = false; // helper flag for checking if all inputs are filled.
+    event.preventDefault(); // prevent from submitting a form before validate all inputs
 
     inputs.forEach(input => {
-        if (emptyCheck && validateEmail(input) == true) {
+        if (emptyCheck && validateEmail(input) == true) { //if all inputs are filled and email is valid form is submiting.
             form.submit();
         }
         if (input.value === null || input.value === '') {
