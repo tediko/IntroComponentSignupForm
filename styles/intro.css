@@ -93,12 +93,20 @@
 }
 
 .intro__invalid-message {
+    visibility: hidden;
+    height: 0px;
     color: var(--clr-red);
     margin-top: 3px;
     align-self: flex-end;
     font-size: 0.75rem;
     font-weight: 500;
     font-style: italic;
+    transition: height 250ms ease-in;
+}
+
+.intro__invalid-message.active {
+    visibility: visible;
+    height: 10px;
 }
 
 .intro__cta {
