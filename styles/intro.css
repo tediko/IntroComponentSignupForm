@@ -17,11 +17,13 @@
     line-height: 1.1;
     margin-bottom: 32px;
     text-shadow: 0px 0px 2px rgb(168, 166, 166);
+    animation: slideTop 1000ms;
 }
 
 .intro__text {
     font-weight: 500;
     text-shadow: 0px 0px 2px rgb(168, 166, 166);
+    animation: slideBottom 1000ms;
 }
 
 .intro__signup {
@@ -30,6 +32,7 @@
     flex-flow: column;
     max-width: 540px;
     margin-left: 20px;
+    animation: signupScale 1000ms;
 }
 
 .intro__message {
