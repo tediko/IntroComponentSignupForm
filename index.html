@@ -20,16 +20,16 @@
         <div class="intro__message">
           <p class="intro__message-text"><span class="text-bold">Try it free 7 days</span> then $20/mo. thereafter</p>
         </div>
-        <form action="" class="intro__form">
-          <input type="text" class="intro__input" name="fname" id="fname" placeholder="First Name">
-          <p class="intro__invalid-message">First Name cannot be empty</p>
-          <input type="text" class="intro__input" name="lname" id="lname" placeholder="Last Name">
-          <p class="intro__invalid-message">Last Name cannot be empty</p>
-          <input type="email" class="intro__input" name="email" id="email" placeholder="Email Address">
-          <p class="intro__invalid-message">Looks like this is not an email</p>
-          <input type="password" class="intro__input" name="password" id="password" placeholder="Password">
-          <p class="intro__invalid-message">Password cannot be empty</p>
-          <button type="submit" class="intro__cta">Claim your free trial</button>
+        <form action="" class="intro__form" data-form>
+          <input type="text" class="intro__input" name="fname" id="fname" placeholder="First Name" data-input="fname">
+          <p class="intro__invalid-message" data-inval-msg="fname">First Name cannot be empty</p>
+          <input type="text" class="intro__input" name="lname" id="lname" placeholder="Last Name" data-input="lname">
+          <p class="intro__invalid-message" data-inval-msg="lname">Last Name cannot be empty</p>
+          <input type="email" class="intro__input" name="email" id="email" placeholder="Email Address" data-input="email">
+          <p class="intro__invalid-message" data-inval-msg="email">Looks like this is not an email</p>
+          <input type="password" class="intro__input" name="password" id="password" placeholder="Password" data-input="password">
+          <p class="intro__invalid-message" data-inval-msg="password">Password cannot be empty</p>
+          <button type="submit" class="intro__cta" data-cta>Claim your free trial</button>
           <p class="intro__terms">By clicking the button, you are agreeing to our <a href="#" class="intro__link">Terms and Services</a></p>
         </form>
       </div>
