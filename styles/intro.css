@@ -1,7 +1,7 @@
 /* Intro section */
 .intro__container {
     display: flex;
-    margin: 80px 30px 120px 30px;
+    margin: 120px 30px;
 }
 
 .intro__content {
