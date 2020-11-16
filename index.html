@@ -22,9 +22,13 @@
         </div>
         <form action="" class="intro__form">
           <input type="text" class="intro__input" name="fname" id="fname" placeholder="First Name">
+          <p class="intro__invalid-message">First Name cannot be empty</p>
           <input type="text" class="intro__input" name="lname" id="lname" placeholder="Last Name">
+          <p class="intro__invalid-message">Last Name cannot be empty</p>
           <input type="email" class="intro__input" name="email" id="email" placeholder="Email Address">
+          <p class="intro__invalid-message">Looks like this is not an email</p>
           <input type="password" class="intro__input" name="password" id="password" placeholder="Password">
+          <p class="intro__invalid-message">Password cannot be empty</p>
           <button type="submit" class="intro__cta">Claim your free trial</button>
           <p class="intro__terms">By clicking the button, you are agreeing to our <a href="#" class="intro__link">Terms and Services</a></p>
         </form>
