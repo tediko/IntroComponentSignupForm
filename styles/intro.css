@@ -81,6 +81,7 @@
 
 .intro__input-wrapper.active::before {
     visibility: visible;
+    animation: invalidIcon 500ms;
 }
 
 .intro__input-wrapper.active .intro__input {
@@ -136,6 +137,7 @@
 .intro__invalid-message.active {
     visibility: visible;
     height: 10px;
+    animation: opacity 500ms;
 }
 
 .intro__cta {
