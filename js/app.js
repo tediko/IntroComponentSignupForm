@@ -28,9 +28,11 @@ const validateEmail = (input) => {
     const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (!emailRegex.test(input.value) || input.value == '') {
         showInvalidMsg(input);
+        input.parentElement.classList.remove('valid');
         return false;
     } else {
         hideInvalidMsg(input);
+        input.parentElement.classList.add('valid');
         return true;
     }
 }
@@ -66,16 +68,18 @@ const validateForm = (event) => {
     }
 }
 
+//Fn to check if input is valid listening user real time input. 
 function validateInput() {
     if (this.value === null || this.value === '') {
         showInvalidMsg(this);
+        this.parentElement.classList.remove('valid');
     } else if (this.value !== '' && this.dataset.input !== 'email') {
         hideInvalidMsg(this);
+        this.parentElement.classList.add('valid');
     } else if (this.dataset.input === 'email') {
         validateEmail(this);
     }
 }
 
 submitBtn.addEventListener('click', validateForm);
-inputs.forEach(input => 
-    input.addEventListener('input', validateInput));
+inputs.forEach(input => input.addEventListener('input', validateInput));
