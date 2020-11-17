@@ -28,6 +28,7 @@ const validateEmail = (input) => {
     const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (!emailRegex.test(input.value) || input.value == '') {
         showInvalidMsg(input);
+        return false;
     } else {
         hideInvalidMsg(input);
         return true;
@@ -39,20 +40,30 @@ const validateForm = (event) => {
     event.preventDefault(); // prevent from submitting a form before validate all inputs
     let emptyCheck = 0; // helper flag for checking if all inputs are filled.
     const numOfInputs = inputs.length; // Number of input fields to check if all are filled. 
+    let isEmailValid; // Returns true or false based on validateEmail function return.
 
     inputs.forEach(input => {
-        if (emptyCheck === numOfInputs && validateEmail(input) == true) { //if all inputs are filled and email is valid form is submiting.
-            form.submit();
-        }
         if (input.value === null || input.value === '') {
             showInvalidMsg(input);
         } else if (input.value !== '' && input.dataset.input !== 'email') {
             hideInvalidMsg(input);
-            emptyCheck++;
         } else if (input.dataset.input === 'email') {
             validateEmail(input);
+            isEmailValid = validateEmail(input);
         }
     })
+
+    // Check if all inputs are filled
+    inputs.forEach(input => {
+        if (input.value !== '') {
+            emptyCheck++;
+        }
+    })
+
+    //if all inputs are filled and email is valid form is submiting.
+    if (emptyCheck === numOfInputs && isEmailValid) { 
+        form.submit();
+    }
 }
 
 submitBtn.addEventListener('click', validateForm);
