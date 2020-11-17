@@ -36,18 +36,19 @@ const validateEmail = (input) => {
 
 // Validate form for empty inputs and invalid emails
 const validateForm = (event) => {
-    let emptyCheck = false; // helper flag for checking if all inputs are filled.
     event.preventDefault(); // prevent from submitting a form before validate all inputs
+    let emptyCheck = 0; // helper flag for checking if all inputs are filled.
+    const numOfInputs = inputs.length; // Number of input fields to check if all are filled. 
 
     inputs.forEach(input => {
-        if (emptyCheck && validateEmail(input) == true) { //if all inputs are filled and email is valid form is submiting.
+        if (emptyCheck === numOfInputs && validateEmail(input) == true) { //if all inputs are filled and email is valid form is submiting.
             form.submit();
         }
         if (input.value === null || input.value === '') {
             showInvalidMsg(input);
         } else if (input.value !== '' && input.dataset.input !== 'email') {
             hideInvalidMsg(input);
-            emptyCheck = true;
+            emptyCheck++;
         } else if (input.dataset.input === 'email') {
             validateEmail(input);
         }
