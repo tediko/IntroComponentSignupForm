@@ -66,4 +66,16 @@ const validateForm = (event) => {
     }
 }
 
+function validateInput() {
+    if (this.value === null || this.value === '') {
+        showInvalidMsg(this);
+    } else if (this.value !== '' && this.dataset.input !== 'email') {
+        hideInvalidMsg(this);
+    } else if (this.dataset.input === 'email') {
+        validateEmail(this);
+    }
+}
+
 submitBtn.addEventListener('click', validateForm);
+inputs.forEach(input => 
+    input.addEventListener('input', validateInput));
