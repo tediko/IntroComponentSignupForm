@@ -92,6 +92,11 @@
     border: 2px solid var(--clr-red);
 }
 
+.intro__input-wrapper.active .intro__input:focus{
+    color: var(--clr-red);
+    border: 2px solid var(--clr-red);
+}
+
 .intro__input {
     width: 100%;
     border: 1px solid var(--clr-blue-grayish);
