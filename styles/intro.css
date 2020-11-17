@@ -97,6 +97,16 @@
     border: 2px solid var(--clr-red);
 }
 
+.intro__input-wrapper.valid .intro__input:focus {
+    border: 2px solid var(--clr-green);
+}
+
+.intro__input-wrapper.valid.intro__input-wrapper::before {
+    visibility: visible;
+    content: url('../assets/img/icon-check.svg');
+    animation: invalidIcon 500ms;
+}
+
 .intro__input {
     width: 100%;
     border: 1px solid var(--clr-blue-grayish);
